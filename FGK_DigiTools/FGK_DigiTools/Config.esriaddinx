@@ -1,0 +1,16 @@
+﻿<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>FGK_DigiTools</Name>
+  <AddInID>{4bfadadb-6f31-4278-b2e8-1e32b944c530}</AddInID>
+  <Description>Type in a description for this Add-in.</Description>
+  <Version>1.0</Version>
+  <Image>Images\FGK_DigiTools.png</Image>
+  <Author>m.baer</Author>
+  <Company></Company>
+  <Date>08.02.2021</Date>
+  <Targets>
+    <Target name="Desktop" version="10.7" />
+  </Targets>
+  <AddIn language="CLR" library="FGK_DigiTools.dll" namespace="FGK_DigiTools">
+    <ArcMap />
+  </AddIn>
+</ESRI.Configuration>
