@@ -1,16 +1,29 @@
 ﻿<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>FGK_DigiTools</Name>
   <AddInID>{4bfadadb-6f31-4278-b2e8-1e32b944c530}</AddInID>
-  <Description>Type in a description for this Add-in.</Description>
+  <Description>Über die Werkzeuge dieses Add-in kann die FGK manuell bearbeitet werden. Ein speziell vorbereitetes mxd Kartenprojekt ist zwingend notwendig. Darüberhinaus müssen einigen Pfade vor der Prozessierung manuell eingetragen werden. Ursprünglich entwickelt von Ralf Knuth als Python AddIn und adaptiert für .NET von Dr. Matthias Bär</Description>
   <Version>1.0</Version>
   <Image>Images\FGK_DigiTools.png</Image>
   <Author>m.baer</Author>
-  <Company></Company>
+  <Company>LZW</Company>
   <Date>08.02.2021</Date>
   <Targets>
     <Target name="Desktop" version="10.7" />
   </Targets>
   <AddIn language="CLR" library="FGK_DigiTools.dll" namespace="FGK_DigiTools">
-    <ArcMap />
+    <ArcMap>
+      <Commands>
+        <Button id="LZW_FGK_DigiTools_ZoomToSelectedFeatures" class="ZoomToSelectedFeatures" message="Zoomt auf ausgewählte Objekte" caption="ZoomToSelectedFeatures" tip="Ausgewählte Objekte vergrößern" category="Add-In Controls" image="Images\ZoomToSelectedFeatures.png" />
+        <Button id="LZW_FGK_DigiTools_DefineExtent" class="DefineExtent" message="Legt den Prozessierungsausschnitt auf Basis markierter FGK_LINIEN fest. Dies ist zwingend notwendig, damit verhindern wird, dass das gesamte Gebiet prozessiert wird." caption="DefineExtent" tip="Prozessierungsausschnitt" category="Add-In Controls" image="Images\DefineExtent.png" />
+      </Commands>
+      <Toolbars>
+        <Toolbar id="LZW_FGK_DigiTools_FGK-DigiTools" caption="FGK-DigiTools" showInitially="true">
+          <Items>
+            <Item refID="LZW_FGK_DigiTools_ZoomToSelectedFeatures" />
+            <Item refID="LZW_FGK_DigiTools_DefineExtent" />
+          </Items>
+        </Toolbar>
+      </Toolbars>
+    </ArcMap>
   </AddIn>
 </ESRI.Configuration>

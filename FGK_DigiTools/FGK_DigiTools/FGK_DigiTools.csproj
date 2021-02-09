@@ -42,6 +42,7 @@
     <Reference Include="ESRI.ArcGIS.Editor, Version=10.7.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Framework">
       <Private>False</Private>
@@ -55,12 +56,22 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DefineExtent.cs" />
+    <Compile Include="messagedebugger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="messagedebugger.Designer.cs">
+      <DependentUpon>messagedebugger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetupPath.cs" />
+    <Compile Include="ZoomToSelectedFeatures.cs" />
     <Compile Include="Config.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Config.esriaddinx</DependentUpon>
@@ -80,6 +91,17 @@
     <Reference Include="ESRI.ArcGIS.ArcMapUI">
       <Private>False</Private>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\ZoomToSelectedFeatures.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\DefineExtent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="messagedebugger.resx">
+      <DependentUpon>messagedebugger.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <ZipFileExtension>esriAddIn</ZipFileExtension>
