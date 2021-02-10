@@ -16,10 +16,11 @@ namespace FGK_DigiTools
 
         protected override void OnClick()
         {
-            messagedebugger myform = new messagedebugger();
-            myform.ShowDialog();
-            SetupPath path = new SetupPath();
-            System.Windows.Forms.MessageBox.Show(path.dir);
+            //messagedebugger myform = new messagedebugger();
+            //myform.ShowDialog();
+            SetupPath path = new SetupPath(); //initialize new object from SetupPath class
+            //System.Windows.Forms.MessageBox.Show(path.dir); //test path object with a windows messagebox
+
             
         }
 
